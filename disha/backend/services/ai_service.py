@@ -21,7 +21,7 @@ CACHE_TTL_SECONDS = 300
 
 def _get_config():
     api_key = os.getenv("GEMINI_API_KEY", "")
-    model = os.getenv("GEMINI_MODEL", "gemini-2.5-flash")
+    model = os.getenv("GEMINI_MODEL", "gemini-3.5-flash")
     return api_key, model
 
 
