@@ -1,8 +1,0 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-html,body{background-color:#0F1A2B;color:#EDEAE0}
-*{box-sizing:border-box}
-.tabular{font-family:'JetBrains Mono',monospace;font-variant-numeric:tabular-nums}
-::selection{background-color:#D4A537;color:#0F1A2B}
-::-webkit-scrollbar{width:8px}::-webkit-scrollbar-thumb{background:#2A3B57;border-radius:4px}
