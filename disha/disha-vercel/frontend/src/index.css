@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Theme tokens ─────────────────────────────────────────── */
+:root {
+  --bg-base:     #0d1117;
+  --bg-panel:    #161b22;
+  --bg-card:     #1c2333;
+  --bg-hover:    #21262d;
+  --border:      rgba(255,255,255,0.08);
+  --border-mid:  rgba(255,255,255,0.12);
+  --text-1:      #e6edf3;
+  --text-2:      #8b949e;
+  --text-3:      #6e7681;
+  --gain:        #2ea043;
+  --gain-bg:     rgba(46,160,67,0.12);
+  --loss:        #f85149;
+  --loss-bg:     rgba(248,81,73,0.12);
+  --accent:      #388bfd;
+  --accent-bg:   rgba(56,139,253,0.12);
+  --gold:        #e3b341;
+  --gold-bg:     rgba(227,179,65,0.12);
+  --shadow:      0 8px 24px rgba(0,0,0,0.4);
+  --radius:      8px;
+}
+
+.light {
+  --bg-base:     #f0f2f5;
+  --bg-panel:    #ffffff;
+  --bg-card:     #ffffff;
+  --bg-hover:    #f6f8fa;
+  --border:      rgba(0,0,0,0.08);
+  --border-mid:  rgba(0,0,0,0.12);
+  --text-1:      #0d1117;
+  --text-2:      #57606a;
+  --text-3:      #8c959f;
+  --gain:        #1a7f37;
+  --gain-bg:     rgba(26,127,55,0.1);
+  --loss:        #cf222e;
+  --loss-bg:     rgba(207,34,46,0.1);
+  --accent:      #0969da;
+  --accent-bg:   rgba(9,105,218,0.1);
+  --gold:        #9a6700;
+  --gold-bg:     rgba(154,103,0,0.1);
+  --shadow:      0 4px 16px rgba(0,0,0,0.08);
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; font-family: 'Inter', sans-serif; background: var(--bg-base); color: var(--text-1); }
+::selection { background: var(--accent); color: #fff; }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border-mid); border-radius: 3px; }
+
+/* Utilities */
+.tabular { font-variant-numeric: tabular-nums; }
+.gain { color: var(--gain); }
+.loss { color: var(--loss); }
+
+/* Card */
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+/* Fade in */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.fade-up { animation: fadeUp 0.3s ease forwards; }
+
+/* Gauge ring */
+@keyframes strokeDash {
+  from { stroke-dashoffset: 283; }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
